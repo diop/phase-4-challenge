@@ -1,5 +1,7 @@
 const express = require('express')
 const app = express()
+const session = require('cookie-session')
+const ejs = require('ejs')
 const bodyParser = require('body-parser')
 const routes = require('./server/routes')
 const path = require('path')
