@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const albums = require('../models/albums')
-const reviews = require('../models/reviews')
+const albums = require('../../models/albums')
+const reviews = require('../../models/reviews')
 
 router.get('/', (request, response) => {
   Promise.all([albums.getAll(), reviews.getThreeNewest()])
