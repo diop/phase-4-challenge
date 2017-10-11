@@ -21,5 +21,5 @@ CREATE TABLE reviews (
   content TEXT NOT NULL,
   user_id INTEGER NOT NULL REFERENCES users(id),
   album_id INTEGER NOT NULL REFERENCES albums(id),
-  date_added TIMESTAMP NOT NULL DEFAULT NOW()
+  date_created TIMESTAMP NOT NULL DEFAULT NOW()
 );
