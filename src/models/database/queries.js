@@ -45,6 +45,10 @@ const queries = {
       ORDER BY reviews.date_created DESC`, [userID])
   },
 
+  getReviewsByAlbumId: (albumId) => {
+    return database.any(`SELECT * FROM reviews WHERE album_id = $1`, [albumId])
+  },
+
   getReviewsByCityId: (albumID) => {
     return database.any(`SELECT reviews.id, reviews.content, reviews.album_id, reviews.user_id, reviews.date_created, albums.title AS album_title, users.name AS user_name FROM reviews
       INNER JOIN users ON reviews.user_id = users.id
