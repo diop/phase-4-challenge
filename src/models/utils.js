@@ -4,7 +4,7 @@ const saltRounds = 10
 const utils = {
 
   isEmpty: (name, email, password) => {
-    return (name === '' || email === '' || password = '')
+    return (name === '' || email === '' || password === '')
   },
 
   encryptPassword: (plainTextPassword) => {

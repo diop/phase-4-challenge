@@ -49,7 +49,7 @@ const queries = {
     return database.any(`SELECT * FROM reviews WHERE album_id = $1`, [albumId])
   },
 
-  getReviewsByCityId: (albumID) => {
+  getReviewsByAlbumId: (albumID) => {
     return database.any(`SELECT reviews.id, reviews.content, reviews.album_id, reviews.user_id, reviews.date_created, albums.title AS album_title, users.name AS user_name FROM reviews
       INNER JOIN users ON reviews.user_id = users.id
       INNER JOIN albums ON reviews.album_id = albums.id

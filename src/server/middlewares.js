@@ -1,5 +1,6 @@
 const middlewares = {
-  const sessionChecker = (request, response, next) => {
+
+sessionChecker: (request, response, next) => {
     if (!request.session.user) {
       request.sessionChecker = false
     } else {
@@ -8,6 +9,4 @@ const middlewares = {
   }
 }
 
-module.exports = {
-  sessionChecker,
-}
+module.exports = { sessionChecker }
